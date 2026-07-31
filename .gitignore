@@ -1,0 +1,15 @@
+# Erstmal alles ignorieren
+*
+
+# Aber in Unterordner reinschauen (sonst würde chapter_0/ etc. übersprungen)
+!*/
+
+# Diese Dateien sind erlaubt
+!*.cpp
+!*.h
+!*.hpp
+!Makefile
+!CMakeLists.txt
+!*.md
+!.gitignore
+!LICENSE
