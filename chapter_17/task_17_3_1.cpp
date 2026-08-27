@@ -6,7 +6,7 @@ template <typename T, auto N> void printArray(const std::array<T, N>& arr)
     std::cout << "The array (";
 
     bool hasComma = false;
-    for (auto a : arr)
+    for (const auto a : arr)
     {
 
         if (!hasComma)
