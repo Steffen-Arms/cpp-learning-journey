@@ -1,6 +1,8 @@
 #include <array>
 #include <string_view>
 
+#ifndef Potion_H
+#define Potion_H
 namespace Potion
 {
 enum Type
@@ -29,3 +31,4 @@ static_assert(std::size(potionTypesArray) == max_potions);
 static_assert(std::size(potionNamesArray) == max_potions);
 static_assert(std::size(potionCostArray) == max_potions);
 }; // namespace Potion
+#endif
