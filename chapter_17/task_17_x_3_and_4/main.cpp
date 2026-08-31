@@ -5,8 +5,8 @@
 
 namespace Settings
 {
-int valueDealerStop{17};
-int valueGetBusts{21};
+constexpr int valueDealerStop{17};
+constexpr int valueGetBusts{21};
 } // namespace Settings
 
 void dealerTurn(Player& dealer, Deck& currentDeck)
