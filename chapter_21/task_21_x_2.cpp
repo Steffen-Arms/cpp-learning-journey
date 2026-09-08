@@ -14,7 +14,7 @@ class Average
     }
     friend std::ostream& operator<<(std::ostream& out, const Average& avg);
 
-    Average operator+=(int x)
+    Average operator+=(std::int32_t x)
     {
         m_overallSum += x;
         m_howManyNumbers += 1;
