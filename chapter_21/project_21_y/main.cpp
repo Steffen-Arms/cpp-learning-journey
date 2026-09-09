@@ -6,6 +6,7 @@
 int main()
 {
     Board board{};
+    board.randomizeBoard();
     std::cout << board;
 
     UserInput::Direction currentDirection{};
@@ -19,6 +20,17 @@ int main()
             break;
         }
         std::cout << UserInput::directionName[currentDirection] << '\n';
+        board.applyDirection(currentDirection);
+
+        std::cout << board;
+
+        if (board.isInWinningState())
+        {
+            std::cout << "You did it champ! \n";
+            break;
+        }
+
+        // std::cout << "Random: " << UserInput::getRandomDirection() << '\n';
     }
 
     return 0;

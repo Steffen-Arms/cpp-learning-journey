@@ -1,4 +1,5 @@
 #include "userInput.h"
+#include "random.h"
 #include <cstdlib>
 #include <iostream>
 #include <limits>
@@ -74,5 +75,11 @@ Direction getUserInput()
             std::cout << "Sry, this is not a valid command. Try again \n";
         }
     }
+}
+
+Direction getRandomDirection()
+{
+    return static_cast<Direction>(
+        Random::get(0, Direction::max_Directions - 1));
 }
 } // namespace UserInput

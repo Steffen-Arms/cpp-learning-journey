@@ -13,15 +13,16 @@ enum Direction
     down,
     right,
     left,
+    max_Directions,
     quit,
     invalidInput,
-    max_Directions,
 };
 
 using namespace std::string_view_literals;
-constexpr std::array directionName{"up"sv,   "down"sv, "right"sv,
-                                   "left"sv, "quit"sv, "invalidInput"sv};
-static_assert(std::size(directionName) == Direction::max_Directions);
+constexpr std::array directionName{
+    "up"sv,   "down"sv,        "right"sv, "left"sv, "max_Directions"sv,
+    "quit"sv, "invalidInput"sv};
+static_assert(std::size(directionName) - 3 == Direction::max_Directions);
 
 void ignoreLine();
 
@@ -31,6 +32,8 @@ bool clearFailedExtraction();
 Direction charToDirection(char userInput);
 
 Direction getUserInput();
+
+Direction getRandomDirection();
 } // namespace UserInput
 
 #endif
