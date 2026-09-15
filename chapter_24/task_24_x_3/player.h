@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include "creature.h"
+#include <iostream>
 
 class Player : public Creature
 {
@@ -20,6 +21,16 @@ class Player : public Creature
     int getLevel() const { return m_level; }
 
     bool hasWon() const { return m_level >= 20; }
+
+    friend std::ostream& operator<<(std::ostream& out, const Player& player);
 };
+
+std::ostream& operator<<(std::ostream& out, const Player& player)
+{
+    out << "You have health: " << player.getHealth()
+        << " level: " << player.getLevel() << " attack: " << player.getAttack()
+        << " gold: " << player.getGold();
+    return out;
+}
 
 #endif
